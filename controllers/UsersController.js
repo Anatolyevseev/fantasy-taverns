@@ -63,6 +63,7 @@ create = async function(req, res) {
     const body = req.body;
 
     if (!body.Password) {
+        console.log('here forpasword')
         return returnError(res, 'Please enter a password to register', 422);
     }
     let err, user;
@@ -162,3 +163,16 @@ const login = async function(req, res) {
 };
 
 module.exports.login = login;
+
+
+const test = async function (req, res) {
+    return res.send('Success');
+  };
+  
+  module.exports.test = test;
+
+const testPost = async function (req, res) {
+    return res.send('Posted!');
+  };
+  
+  module.exports.testPost = testPost;

@@ -82,4 +82,10 @@ export class AuthService {
             this.cookieService.remove(tokenCookieKey);
         }
     }
+    create(user: any): Observable<any>{
+        console.log('im here2222')
+        return this.http.post<any>('http://localhost:3000/users', user);
+        
+    }
+  
 }
