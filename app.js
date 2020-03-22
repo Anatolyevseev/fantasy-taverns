@@ -66,8 +66,8 @@ app.use((req, res, next) => {
     next();
 });
 
-app.post('/users', UsersController.create);
-app.post('/login', UsersController.login);
+app.post('/users', userController.create);
+app.post('/login', userController.login);
 
 
 
